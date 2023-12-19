@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Passion One');
+
+:root{
+    --orange: #f7be00;
+    --pina: #ffe386;
+    --mango: #db8976;
+}
+body {
+    margin: 0;
+    font-family: 'Passion One'!important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height:100%;
+    width:100%;
+    position: relative;
+    overflow-x:hidden;
+    
+  }
+.nav{
+    width:100%;
+    display:flex;
+    height:auto;
+    z-index: 3;
+}
+.nav>div{
+    width:100%;
+    padding:0rem 1rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav>div>svg:nth-child(1){
+    width: 150px;
+}
+.navmiddle{
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color:white;
+    transition: color 1s ease;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+.navmiddle.dark{
+    color: #007c3c;
+    font-weight: 200;
+}
+.navmiddle a{
+    font-weight: 200;
+}
+.navmiddle>div>a:hover{
+    font-weight: 200;
+    color: #007c3c;
+    cursor:pointer;
+}
+.navmiddle.dark>div>a:hover{
+    font-weight: 200;
+    color: #FFF;
+    cursor:pointer;
+}
+.navmiddle>div{
+    display:flex;
+    gap:1rem;
+}
+@media screen and (max-width: 793px){
+    .navmiddle{
+        display:none;
+    }
+}
+.shopCart{
+    
+    
+}.shopCart>g>path{
+    transition: fill 1s ease;
+}
+.shopCart.dark>g>path{
+    fill: #007c3c;
+}
+.shopCart:hover>g>path{
+    fill: #007c3c;
+    cursor:pointer;
+}
+.shopCart:hover.dark>g>path{
+    fill: #FFF;
+    cursor:pointer;
+}
+.sliderFrame{
+    height:100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--orange);
+    overflow: hidden;
+    transition: background-color 1s ease;
+}
+.sliderFrame2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.slider{
+    width:100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+.slide{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height:100%;
+    flex-shrink:0;
+    overflow-y: visible;
+}
+.slide>img{
+    height: 80%;
+    position: absolute;
+    z-index: 2;
+}
+.slide>img:nth-child(2){
+    
+}
+.slide>img:nth-child(3){
+    height: 30%;
+    top: 5rem;
+    padding-right: 0rem;
+    z-index: 1;
+}
+.slide>img:nth-child(3).show{
+    padding-right: 15rem;
+    transition: padding-right 1s ease;
+}
+.slide>img:nth-child(4){
+    height: 40%;
+    bottom: 0rem;
+    padding-left: 25rem;
+    z-index: 2;
+}
+.slide>p{
+    margin:0;
+    margin-top: -2rem;
+    color:white;
+    font-size: 25vw;
+    font-weight: 500;
+    transition: font-size 1s ease;
+}
+@media screen and (max-width: 1330px){
+    .activeslide>p{
+        font-size: 20vw;
+    }
+}
+@media screen and (max-width: 889px){
+    .activeslide>p{
+        font-size: 25vw;
+    }
+}
+@media screen and (max-width: 580px){
+    .activeslide>p{
+        font-size: 30vw;
+    }
+    .slide:nth-child(2).activeslide>p{
+        font-size: 25vw;
+    }
+}
+.leaf{
+    transition: transform 1s ease;
+}
+.leafoverlay{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    right:0;
+    overflow: hidden;
+}
+.leafoverlay>div{
+    height:100%;
+    position: relative;
+}
+.leafoverlay>div>img{
+    
+    position: absolute;
+    
+}
+.leafoverlay>div>img:nth-child(1){
+    transform: rotate(230deg);
+    bottom:-4rem;
+    right: -4rem;
+    width:15rem;
+}
+.leafoverlay>div>img:nth-child(2){
+    transform: rotate(300deg);
+    bottom: -4rem;
+    left: -6rem;
+    width: 25rem;
+}
+.leafoverlay>div>img:nth-child(3){
+    transform: rotate(130deg);
+    bottom: 57%;
+    right: -3rem;
+    width: 13rem;
+    filter: blur(2px);
+}
+.leafoverlay>div>img:nth-child(4){
+    transform: rotate(34deg);
+    bottom: 70%;
+    left: 4rem;
+    width: 9rem;
+    filter: blur(2px);
+}
+
+.selectSlideFrame{
+    z-index: 3;
+    height:100px;
+    position: absolute;
+    bottom:0;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+.selectSlide{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.selector{
+    cursor:pointer;
+    transition: transform 0.5s ease;
+}
+.selector:hover{
+    transform:scale(1.3)
+}
+.selectSlide>span{
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff82;
+    border-radius: 50%;
+}
+.selectSlide>span.isactive{
+    background-color: #FFF;
+}
+.loader{
+    position: absolute;
+    width:100%;
+    height:100vh;
+    background-color:var(--pina);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.loader>svg{
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
